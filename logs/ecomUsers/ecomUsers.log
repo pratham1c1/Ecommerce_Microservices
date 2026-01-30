@@ -1,0 +1,568 @@
+2026-01-22 18:11:33 INFO  [main]  c.p.ecomUsers.EcomUsersApplication - Starting EcomUsersApplication using Java 23.0.2 with PID 5480 (C:\Users\pchandek\Documents\PC_things\PC_Work\Real_Project\Ecommerce_Microservice_Using_Kafka\ecomUsers\target\classes started by pchandek in C:\Users\pchandek\Documents\PC_things\PC_Work\Real_Project\Ecommerce_Microservice_Using_Kafka)
+2026-01-22 18:11:33 INFO  [main]  c.p.ecomUsers.EcomUsersApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-22 18:11:35 INFO  [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-22 18:11:35 INFO  [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 365 ms. Found 1 JPA repository interface.
+2026-01-22 18:11:36 INFO  [main]  o.s.cloud.context.scope.GenericScope - BeanFactory id=e1f28da5-3b01-3918-b68b-074e1a4e752c
+2026-01-22 18:11:39 INFO  [main]  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-01-22 18:11:39 INFO  [main]  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-01-22 18:11:39 INFO  [main]  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-22 18:11:39 INFO  [main]  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-01-22 18:11:40 INFO  [main]  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-22 18:11:40 INFO  [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6495 ms
+2026-01-22 18:11:41 INFO  [main]  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-22 18:11:41 INFO  [main]  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2026-01-22 18:11:41 INFO  [main]  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-01-22 18:11:43 INFO  [main]  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-22 18:11:43 INFO  [main]  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-22 18:11:44 INFO  [main]  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@338270ea
+2026-01-22 18:11:44 INFO  [main]  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-22 18:11:44 INFO  [main]  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-22 18:11:47 INFO  [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-22 18:11:47 INFO  [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-22 18:11:48 INFO  [main]  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-22 18:11:49 WARN  [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-22 18:11:50 INFO  [main]  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-01-22 18:11:50 WARN  [main]  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-01-22 18:11:50 INFO  [main]  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-01-22 18:11:50 INFO  [main]  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-01-22 18:11:50 INFO  [main]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 18:11:50 INFO  [main]  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-01-22 18:11:50 INFO  [main]  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-01-22 18:11:50 INFO  [main]  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-01-22 18:11:50 INFO  [main]  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-01-22 18:11:50 INFO  [main]  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-01-22 18:11:50 INFO  [main]  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-01-22 18:11:50 INFO  [main]  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-01-22 18:11:51 INFO  [main]  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-01-22 18:11:51 INFO  [main]  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-01-22 18:11:51 INFO  [main]  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-01-22 18:11:51 INFO  [main]  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1769085711306 with initial instances count: 2
+2026-01-22 18:11:51 INFO  [main]  o.s.c.n.e.s.EurekaServiceRegistry - Registering application ECOMUSERS with eureka with status UP
+2026-01-22 18:11:51 INFO  [main]  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1769085711314, current=UP, previous=STARTING]
+2026-01-22 18:11:51 INFO  [main]  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-01-22 18:11:51 INFO  [DiscoveryClient-InstanceInfoReplicator-%d]  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ECOMUSERS/pchandek-54050817H:ecomUsers:8081: registering service...
+2026-01-22 18:11:51 INFO  [main]  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-01-22 18:11:51 INFO  [main]  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8081
+2026-01-22 18:11:51 INFO  [DiscoveryClient-InstanceInfoReplicator-%d]  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ECOMUSERS/pchandek-54050817H:ecomUsers:8081 - registration status: 204
+2026-01-22 18:11:51 INFO  [main]  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ecomOrderService-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ecomOrderService
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-01-22 18:11:51 INFO  [main]  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2026-01-22 18:11:51 INFO  [main]  o.a.k.c.consumer.ConsumerConfig - These configurations '[spring.json.trusted.packages, spring.json.use.type.headers]' were supplied but are not used yet.
+2026-01-22 18:11:51 INFO  [main]  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2026-01-22 18:11:51 INFO  [main]  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2026-01-22 18:11:51 INFO  [main]  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1769085711657
+2026-01-22 18:11:51 INFO  [main]  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Subscribed to topic(s): ecomOrderService_addUserProduct
+2026-01-22 18:11:51 INFO  [main]  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ecomOrderService-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ecomOrderService
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-01-22 18:11:51 INFO  [main]  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2026-01-22 18:11:51 INFO  [main]  o.a.k.c.consumer.ConsumerConfig - These configurations '[spring.json.trusted.packages, spring.json.use.type.headers]' were supplied but are not used yet.
+2026-01-22 18:11:51 INFO  [main]  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2026-01-22 18:11:51 INFO  [main]  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2026-01-22 18:11:51 INFO  [main]  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1769085711691
+2026-01-22 18:11:51 INFO  [main]  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Subscribed to topic(s): ecomOrderService_removeUserProduct
+2026-01-22 18:11:51 INFO  [main]  c.p.ecomUsers.EcomUsersApplication - Started EcomUsersApplication in 19.237 seconds (process running for 20.43)
+2026-01-22 18:11:52 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] The metadata response from the cluster reported a recoverable issue with correlation id 2 : {ecomOrderService_removeUserProduct=UNKNOWN_TOPIC_OR_PARTITION}
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Cluster ID: tMDBM2GmSMeaTviXxskT7Q
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Cluster ID: tMDBM2GmSMeaTviXxskT7Q
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] (Re-)joining group
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] (Re-)joining group
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Request joining group due to: need to re-join with the given member-id: consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Request joining group due to: need to re-join with the given member-id: consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] (Re-)joining group
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] (Re-)joining group
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Successfully joined group with generation Generation{generationId=34, memberId='consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9', protocol='range'}
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Successfully joined group with generation Generation{generationId=34, memberId='consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171', protocol='range'}
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Successfully synced group in generation Generation{generationId=34, memberId='consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171', protocol='range'}
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Successfully synced group in generation Generation{generationId=34, memberId='consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9', protocol='range'}
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Notifying assignor about the new Assignment(partitions=[ecomOrderService_removeUserProduct-0])
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Notifying assignor about the new Assignment(partitions=[ecomOrderService_addUserProduct-0])
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Adding newly assigned partitions: ecomOrderService_addUserProduct-0
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Adding newly assigned partitions: ecomOrderService_removeUserProduct-0
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Found no committed offset for partition ecomOrderService_removeUserProduct-0
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.internals.ConsumerUtils - Setting offset for partition ecomOrderService_addUserProduct-0 to the committed offset FetchPosition{offset=6, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=4}}
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions assigned: [ecomOrderService_addUserProduct-0]
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Resetting offset for partition ecomOrderService_removeUserProduct-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+2026-01-22 18:11:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions assigned: [ecomOrderService_removeUserProduct-0]
+2026-01-22 18:16:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 18:19:28 INFO  [http-nio-8081-exec-1]  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-22 18:19:28 INFO  [http-nio-8081-exec-1]  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-22 18:19:28 INFO  [http-nio-8081-exec-1]  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-01-22 18:19:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  c.p.e.service.UserDetailsService - Received ecomOrderService remove UserProduct request : {"orderId":4,"userName":"pc","productName":"headphone"}
+2026-01-22 18:19:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  c.p.e.service.UserDetailsService - Fetched User Details : pc -> [mouse, headphone, headphone, headphone]
+2026-01-22 18:19:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  c.p.e.service.UserDetailsService - Saved the updated list successfully : [mouse, headphone, headphone]
+2026-01-22 18:21:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Request joining group due to: group is already rebalancing
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Revoke previously assigned partitions ecomOrderService_addUserProduct-0
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions revoked: [ecomOrderService_addUserProduct-0]
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] (Re-)joining group
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Request joining group due to: group is already rebalancing
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Revoke previously assigned partitions ecomOrderService_removeUserProduct-0
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions revoked: [ecomOrderService_removeUserProduct-0]
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] (Re-)joining group
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Successfully joined group with generation Generation{generationId=35, memberId='consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9', protocol='range'}
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Successfully joined group with generation Generation{generationId=35, memberId='consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171', protocol='range'}
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Finished assignment for group at generation 35: {consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9=Assignment(partitions=[ecomOrderService_removeUserProduct-0]), consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171=Assignment(partitions=[ecomOrderService_addUserProduct-0]), consumer-ecomOrderService-1-98dcd7d7-8b22-42a6-aea5-f5b0c8081648=Assignment(partitions=[ecomOrderService_addToProductQuantity-0])}
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Successfully synced group in generation Generation{generationId=35, memberId='consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9', protocol='range'}
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Successfully synced group in generation Generation{generationId=35, memberId='consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171', protocol='range'}
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Notifying assignor about the new Assignment(partitions=[ecomOrderService_addUserProduct-0])
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Notifying assignor about the new Assignment(partitions=[ecomOrderService_removeUserProduct-0])
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Adding newly assigned partitions: ecomOrderService_addUserProduct-0
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Adding newly assigned partitions: ecomOrderService_removeUserProduct-0
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.internals.ConsumerUtils - Setting offset for partition ecomOrderService_removeUserProduct-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.internals.ConsumerUtils - Setting offset for partition ecomOrderService_addUserProduct-0 to the committed offset FetchPosition{offset=6, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=4}}
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions assigned: [ecomOrderService_removeUserProduct-0]
+2026-01-22 18:24:24 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions assigned: [ecomOrderService_addUserProduct-0]
+2026-01-22 18:26:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 18:31:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 18:36:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 18:41:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 18:46:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Request joining group due to: group is already rebalancing
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Revoke previously assigned partitions ecomOrderService_removeUserProduct-0
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions revoked: [ecomOrderService_removeUserProduct-0]
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] (Re-)joining group
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Request joining group due to: group is already rebalancing
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Revoke previously assigned partitions ecomOrderService_addUserProduct-0
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions revoked: [ecomOrderService_addUserProduct-0]
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] (Re-)joining group
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Successfully joined group with generation Generation{generationId=36, memberId='consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171', protocol='range'}
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Successfully joined group with generation Generation{generationId=36, memberId='consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9', protocol='range'}
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Finished assignment for group at generation 36: {consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9=Assignment(partitions=[ecomOrderService_removeUserProduct-0]), consumer-ecomOrderService-1-0da38e28-800e-423a-95c0-633cae1e4130=Assignment(partitions=[ecomUserService_addUserProduct-0]), consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171=Assignment(partitions=[ecomOrderService_addUserProduct-0]), consumer-ecomOrderService-1-98dcd7d7-8b22-42a6-aea5-f5b0c8081648=Assignment(partitions=[ecomOrderService_addToProductQuantity-0])}
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Successfully synced group in generation Generation{generationId=36, memberId='consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9', protocol='range'}
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Successfully synced group in generation Generation{generationId=36, memberId='consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171', protocol='range'}
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Notifying assignor about the new Assignment(partitions=[ecomOrderService_removeUserProduct-0])
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Notifying assignor about the new Assignment(partitions=[ecomOrderService_addUserProduct-0])
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Adding newly assigned partitions: ecomOrderService_removeUserProduct-0
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Adding newly assigned partitions: ecomOrderService_addUserProduct-0
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.internals.ConsumerUtils - Setting offset for partition ecomOrderService_removeUserProduct-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions assigned: [ecomOrderService_removeUserProduct-0]
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.internals.ConsumerUtils - Setting offset for partition ecomOrderService_addUserProduct-0 to the committed offset FetchPosition{offset=6, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=4}}
+2026-01-22 18:48:54 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions assigned: [ecomOrderService_addUserProduct-0]
+2026-01-22 18:50:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  c.p.e.service.UserDetailsService - Received ecomOrderService addUserProduct request : {"orderId":5,"userName":"pc","productName":"headphone"}
+2026-01-22 18:50:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  c.p.e.service.UserDetailsService - Adding the details to the userList
+2026-01-22 18:50:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  c.p.e.service.UserDetailsService - Added the headphone to userList for pc user
+2026-01-22 18:50:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  c.p.e.service.UserDetailsService - Sending the message to ecomOrderService for placing an Order UserProductsResponse(data=OrderDetailsWrapper(orderId=5, userName=pc, productName=headphone), status=200, message=Successfully Added pc details)
+2026-01-22 18:50:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = ecomUsers-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-01-22 18:50:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2026-01-22 18:50:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.clients.producer.KafkaProducer - [Producer clientId=ecomUsers-producer-1] Instantiated an idempotent producer.
+2026-01-22 18:50:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2026-01-22 18:50:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2026-01-22 18:50:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1769088023815
+2026-01-22 18:50:23 INFO  [kafka-producer-network-thread | ecomUsers-producer-1]  org.apache.kafka.clients.Metadata - [Producer clientId=ecomUsers-producer-1] Cluster ID: tMDBM2GmSMeaTviXxskT7Q
+2026-01-22 18:50:23 INFO  [kafka-producer-network-thread | ecomUsers-producer-1]  o.a.k.c.p.i.TransactionManager - [Producer clientId=ecomUsers-producer-1] ProducerId set to 1002 with epoch 0
+2026-01-22 18:51:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 18:56:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 19:01:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Request joining group due to: group is already rebalancing
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Revoke previously assigned partitions ecomOrderService_removeUserProduct-0
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions revoked: [ecomOrderService_removeUserProduct-0]
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] (Re-)joining group
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Request joining group due to: group is already rebalancing
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Revoke previously assigned partitions ecomOrderService_addUserProduct-0
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions revoked: [ecomOrderService_addUserProduct-0]
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] (Re-)joining group
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Successfully joined group with generation Generation{generationId=37, memberId='consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9', protocol='range'}
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Successfully joined group with generation Generation{generationId=37, memberId='consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171', protocol='range'}
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Finished assignment for group at generation 37: {consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9=Assignment(partitions=[ecomOrderService_removeUserProduct-0]), consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171=Assignment(partitions=[ecomOrderService_addUserProduct-0]), consumer-ecomOrderService-1-98dcd7d7-8b22-42a6-aea5-f5b0c8081648=Assignment(partitions=[ecomOrderService_addToProductQuantity-0])}
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Successfully synced group in generation Generation{generationId=37, memberId='consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9', protocol='range'}
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Successfully synced group in generation Generation{generationId=37, memberId='consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171', protocol='range'}
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Notifying assignor about the new Assignment(partitions=[ecomOrderService_removeUserProduct-0])
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Adding newly assigned partitions: ecomOrderService_removeUserProduct-0
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Notifying assignor about the new Assignment(partitions=[ecomOrderService_addUserProduct-0])
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Adding newly assigned partitions: ecomOrderService_addUserProduct-0
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.internals.ConsumerUtils - Setting offset for partition ecomOrderService_addUserProduct-0 to the committed offset FetchPosition{offset=7, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=4}}
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions assigned: [ecomOrderService_addUserProduct-0]
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.internals.ConsumerUtils - Setting offset for partition ecomOrderService_removeUserProduct-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2026-01-22 19:03:08 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions assigned: [ecomOrderService_removeUserProduct-0]
+2026-01-22 19:03:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Request joining group due to: group is already rebalancing
+2026-01-22 19:03:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Request joining group due to: group is already rebalancing
+2026-01-22 19:03:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Revoke previously assigned partitions ecomOrderService_removeUserProduct-0
+2026-01-22 19:03:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Revoke previously assigned partitions ecomOrderService_addUserProduct-0
+2026-01-22 19:03:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions revoked: [ecomOrderService_removeUserProduct-0]
+2026-01-22 19:03:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] (Re-)joining group
+2026-01-22 19:03:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions revoked: [ecomOrderService_addUserProduct-0]
+2026-01-22 19:03:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] (Re-)joining group
+2026-01-22 19:03:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Successfully joined group with generation Generation{generationId=38, memberId='consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9', protocol='range'}
+2026-01-22 19:03:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Successfully joined group with generation Generation{generationId=38, memberId='consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171', protocol='range'}
+2026-01-22 19:03:51 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Finished assignment for group at generation 38: {consumer-ecomOrderService-1-352ffff0-9b32-4927-872c-36b3f8a14e11=Assignment(partitions=[ecomUserService_addUserProduct-0]), consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9=Assignment(partitions=[ecomOrderService_removeUserProduct-0]), consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171=Assignment(partitions=[ecomOrderService_addUserProduct-0]), consumer-ecomOrderService-1-98dcd7d7-8b22-42a6-aea5-f5b0c8081648=Assignment(partitions=[ecomOrderService_addToProductQuantity-0])}
+2026-01-22 19:03:51 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Successfully synced group in generation Generation{generationId=38, memberId='consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9', protocol='range'}
+2026-01-22 19:03:51 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Successfully synced group in generation Generation{generationId=38, memberId='consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171', protocol='range'}
+2026-01-22 19:03:51 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Notifying assignor about the new Assignment(partitions=[ecomOrderService_removeUserProduct-0])
+2026-01-22 19:03:51 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Notifying assignor about the new Assignment(partitions=[ecomOrderService_addUserProduct-0])
+2026-01-22 19:03:51 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Adding newly assigned partitions: ecomOrderService_removeUserProduct-0
+2026-01-22 19:03:51 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Adding newly assigned partitions: ecomOrderService_addUserProduct-0
+2026-01-22 19:03:51 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.internals.ConsumerUtils - Setting offset for partition ecomOrderService_removeUserProduct-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2026-01-22 19:03:51 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.internals.ConsumerUtils - Setting offset for partition ecomOrderService_addUserProduct-0 to the committed offset FetchPosition{offset=7, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=4}}
+2026-01-22 19:03:51 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions assigned: [ecomOrderService_removeUserProduct-0]
+2026-01-22 19:03:51 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions assigned: [ecomOrderService_addUserProduct-0]
+2026-01-22 19:06:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 19:11:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 19:16:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 19:21:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 19:26:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 19:31:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 19:36:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 19:41:50 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 19:46:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 19:51:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 19:56:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 20:01:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 20:06:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 20:11:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 20:16:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 20:21:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 20:26:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 20:31:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 20:36:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 20:41:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 20:46:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 20:51:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 20:56:51 INFO  [AsyncResolver-bootstrap-executor-%d]  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-01-22 21:00:21 INFO  [SpringApplicationShutdownHook]  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application ECOMUSERS with eureka with status DOWN
+2026-01-22 21:00:21 INFO  [SpringApplicationShutdownHook]  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1769095821233, current=DOWN, previous=UP]
+2026-01-22 21:00:21 INFO  [DiscoveryClient-InstanceInfoReplicator-%d]  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ECOMUSERS/pchandek-54050817H:ecomUsers:8081: registering service...
+2026-01-22 21:00:21 INFO  [DiscoveryClient-InstanceInfoReplicator-%d]  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ECOMUSERS/pchandek-54050817H:ecomUsers:8081 - registration status: 204
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Revoke previously assigned partitions ecomOrderService_addUserProduct-0
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Revoke previously assigned partitions ecomOrderService_removeUserProduct-0
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions revoked: [ecomOrderService_addUserProduct-0]
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: partitions revoked: [ecomOrderService_removeUserProduct-0]
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Member consumer-ecomOrderService-2-87d818ae-fa6c-4145-89d2-6fd982875ab9 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Member consumer-ecomOrderService-1-19179a43-f22c-4080-90c8-5714760e4171 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Request joining group due to: consumer pro-actively leaving the group
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Request joining group due to: consumer pro-actively leaving the group
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Unsubscribed all topics or patterns and assigned partitions
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Unsubscribed all topics or patterns and assigned partitions
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-2, groupId=ecomOrderService] Request joining group due to: consumer pro-actively leaving the group
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ecomOrderService-1, groupId=ecomOrderService] Request joining group due to: consumer pro-actively leaving the group
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-ecomOrderService-2 unregistered
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-ecomOrderService-1 unregistered
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: Consumer stopped
+2026-01-22 21:00:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]  o.s.k.l.KafkaMessageListenerContainer - ecomOrderService: Consumer stopped
+2026-01-22 21:00:21 INFO  [SpringApplicationShutdownHook]  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-22 21:00:21 INFO  [tomcat-shutdown]  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-22 21:00:21 INFO  [SpringApplicationShutdownHook]  o.a.k.clients.producer.KafkaProducer - [Producer clientId=ecomUsers-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2026-01-22 21:00:21 INFO  [SpringApplicationShutdownHook]  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2026-01-22 21:00:21 INFO  [SpringApplicationShutdownHook]  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-01-22 21:00:21 INFO  [SpringApplicationShutdownHook]  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-01-22 21:00:21 INFO  [SpringApplicationShutdownHook]  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2026-01-22 21:00:21 INFO  [SpringApplicationShutdownHook]  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for ecomUsers-producer-1 unregistered
+2026-01-22 21:00:21 INFO  [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-22 21:00:21 INFO  [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-22 21:00:21 INFO  [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-22 21:00:21 INFO  [SpringApplicationShutdownHook]  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-01-22 21:00:24 INFO  [SpringApplicationShutdownHook]  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-01-22 21:00:24 INFO  [SpringApplicationShutdownHook]  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ECOMUSERS/pchandek-54050817H:ecomUsers:8081 - deregister  status: 200
+2026-01-22 21:00:24 INFO  [SpringApplicationShutdownHook]  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

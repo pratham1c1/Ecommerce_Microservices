@@ -38,8 +38,14 @@ public class UserDetailsController {
 
     // Exposed to OrderService
     @PostMapping("validateUserProduct")
-    public ResponseEntity<UserProductsResponse<UserProducts>> validateUser(@RequestBody UserProducts userProduct){
+    public ResponseEntity<UserProductsResponse<UserProducts>> validateUserProduct(@RequestBody UserProducts userProduct){
         return userService.validateUserProduct(userProduct.getUserName(),userProduct.getProductName());
+    }
+
+    //Exposed to OrderService
+    @PostMapping("validateUser")
+    public ResponseEntity<UserProductsResponse<UserProducts>> validateUser(@RequestBody UserProducts userProduct){
+        return userService.validateUser(userProduct.getUserName());
     }
 
 //    -------------------------------------

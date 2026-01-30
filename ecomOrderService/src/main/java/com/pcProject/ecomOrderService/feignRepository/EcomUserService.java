@@ -26,4 +26,7 @@ public interface EcomUserService {
 
     @PostMapping("/users/validateUserProduct")
     public ResponseEntity<UserProductsResponse<UserProducts>> validateUserProduct(@RequestBody UserProducts userProducts);
+
+    @PostMapping("/users/validateUser")
+    public ResponseEntity<UserProductsResponse<UserProducts>> validateUser(@RequestBody UserProducts userProducts);
 }

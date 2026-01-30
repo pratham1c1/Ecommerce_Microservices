@@ -1,6 +1,7 @@
 package com.pcProject.ecomOrderService.controller;
 
 import com.pcProject.ecomOrderService.model.OrderDetails;
+import com.pcProject.ecomOrderService.model.OrderDetailsWrapper;
 import com.pcProject.ecomOrderService.model.UserProducts;
 import com.pcProject.ecomOrderService.model.UserProductsResponse;
 import com.pcProject.ecomOrderService.service.OrderDetailsService;
@@ -37,13 +38,13 @@ public class OrderDetailsController {
 
     // Delete an ordered Product for a User
     @DeleteMapping("deleteOrderDetails")
-    public ResponseEntity<UserProductsResponse<UserProducts>> deleteOrderDetails(@RequestBody UserProducts products){
-        return orderService.deleteOrderDetails(products);
+    public ResponseEntity<UserProductsResponse<OrderDetailsWrapper>> deleteOrderDetails(@RequestBody OrderDetailsWrapper orderDetailsWrapper){
+        return orderService.deleteOrderDetails(orderDetailsWrapper);
     }
 
     // Admin Action
     @PostMapping("updateOrderStatus/{orderId}")
-    public ResponseEntity<OrderDetails> updateOrderStatus(@PathVariable int orderId){
+    public ResponseEntity<UserProductsResponse<OrderDetails>> updateOrderStatus(@PathVariable int orderId){
         return orderService.updateOrderStatus(orderId);
     }
 }

@@ -1,22 +1,36 @@
 package com.pcProject.ecomProducts.service;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.pcProject.ecomProducts.model.OrderDetailsWrapper;
 import com.pcProject.ecomProducts.model.ProductDetails;
 import com.pcProject.ecomProducts.model.ProductWrapper;
 import com.pcProject.ecomProducts.model.UserProductsResponse;
 import com.pcProject.ecomProducts.repository.ProductDetailsRepo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.support.KafkaHeaders;
+import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.io.DataInput;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @Service
 public class ProductDetailsService {
     @Autowired
     private ProductDetailsRepo productRepo;
+    @Autowired
+    private ObjectMapper objectMapper;
 
     // To get the Product Details
     public Object getProductDetails(ProductWrapper product){
@@ -25,6 +39,18 @@ public class ProductDetailsService {
             return new ResponseEntity<>("Could not find the Product with given name",HttpStatus.BAD_REQUEST);
 
         return new ResponseEntity<>(existingProduct, HttpStatus.OK);
+    }
+
+    @Transactional
+    @KafkaListener(topics = "ecomOrderService_addToProductQuantity")
+    public void kafkaConsumer_preserveProduct(String orderDetails) throws JsonProcessingException {
+        OrderDetailsWrapper orderDetailsWrapper = objectMapper.readValue(orderDetails,OrderDetailsWrapper.class);
+        log.info("Received preserve product request from ecomOrderDetails {}",orderDetailsWrapper);
+
+        ProductDetails productDetails = productRepo.findByProductName(orderDetailsWrapper.getProductName());
+        productDetails.setProductQuantity(productDetails.getProductQuantity()+1);
+        productRepo.save(productDetails);
+        log.info("Successfully preserved the {} quantity",orderDetailsWrapper.getProductName());
     }
 
     // To get the Product value using ProductWrapper

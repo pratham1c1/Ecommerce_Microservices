@@ -17,12 +17,13 @@ public class OrderDetails {
     private String userName;
     private String productName;
     private String orderStatus;
-    private String paymentStatus = "Unpaid";
+    private String paymentStatus;
 
     public OrderDetails(int orderId, String userName, String productName, String orderStatus) {
         this.orderId = orderId;
         this.userName = userName;
         this.productName = productName;
         this.orderStatus = orderStatus;
+        this.paymentStatus = "Unpaid";
     }
 }

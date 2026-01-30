@@ -16,7 +16,6 @@ public class ProductDetailsController {
 
     @Autowired
     private ProductDetailsService productService;
-
     //    -----------------------------------------
     // Exposed to OrderService
     @PostMapping("consumeProduct")

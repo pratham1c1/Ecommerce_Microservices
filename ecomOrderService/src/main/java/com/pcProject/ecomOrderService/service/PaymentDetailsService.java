@@ -71,7 +71,7 @@ public class PaymentDetailsService {
         }
 
         //Update Order status
-        ResponseEntity<OrderDetails> orderStatusResponse = orderDetailsService.updateOrderStatus(userOrderResponse.getData().getOrderId());
+        ResponseEntity<UserProductsResponse<OrderDetails>> orderStatusResponse = orderDetailsService.updateOrderStatus(userOrderResponse.getData().getOrderId());
         if(orderStatusResponse.getStatusCode().value() != 200){
             return new ResponseEntity<>(new UserProductsResponse<UserProducts>(null,response.getStatus(),"Payment is due for the User Product."), HttpStatus.BAD_REQUEST);
         }
