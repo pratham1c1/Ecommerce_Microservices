@@ -163,7 +163,7 @@ public class OrderDetailsService {
             response.setMessage("Details doesn't match");
             return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
         }
-        else if(orderDetails.getOrderStatus() != "Placed"){
+        else if(!orderDetails.getOrderStatus().equals("Placed")){
             response.setStatus(HttpStatus.BAD_REQUEST.value());
             response.setMessage("Order already processed");
             return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
@@ -175,7 +175,7 @@ public class OrderDetailsService {
         UserProductsResponse<UserProducts> userResponse = ecomUserService.validateUserProduct(new UserProducts(orderDetailsWrapper.getUserName(), orderDetailsWrapper.getProductName())).getBody();
         if(userResponse == null){
             response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
-            response.setMessage("Something went wrong");
+            response.setMessage("Something went wrong !");
             return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
         }
         if(userResponse.getStatus() != 200){
@@ -184,26 +184,11 @@ public class OrderDetailsService {
             return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
         }
 
-        // Remove the Product from User List
-//        response = ecomUserService.removeUserProduct(userProduct).getBody();
-//        assert response != null;
-//        if(response.getStatus() == 200) {
-//            return new ResponseEntity<>(response, HttpStatus.OK);
-//        }
-//
-//        if(response.getData() == null){
-//            response.setData(new UserProducts(null,null));
-//            response.setStatus(HttpStatus.BAD_REQUEST.value());
-//            response.setMessage("User doesn't exists");
-//            return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
-//
-//        }
         log.info("Sending to ecomUserService to remove from userList {}",orderDetailsWrapper);
         userProductKafkaTemplate.send("ecomOrderService_removeUserProduct", orderDetailsWrapper);
 
         log.info("Sending to ecomProductService to Preserve the product {}",orderDetailsWrapper);
         userProductKafkaTemplate.send("ecomOrderService_addToProductQuantity", orderDetailsWrapper);
-
 
         orderRepo.deleteById(orderDetailsWrapper.getOrderId());
         log.info("Order details successfully deleted");
@@ -216,7 +201,12 @@ public class OrderDetailsService {
         UserProductsResponse<OrderDetails> response = new UserProductsResponse<>();
 
         UserProductsResponse<UserProducts> userResponse = ecomUserService.validateUserProduct(userProduct).getBody();
-        assert userResponse != null;
+        if(userResponse == null){
+            response.setData(null);
+            response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+            response.setMessage("Something went wrong !");
+            return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
         if(userResponse.getStatus() != 200){
             response.setData(new OrderDetails(-1,null,null,null,null));
             response.setStatus(HttpStatus.BAD_REQUEST.value());
@@ -245,7 +235,12 @@ public class OrderDetailsService {
         UserProductsResponse<OrderDetails> response = new UserProductsResponse<>();
 
         UserProductsResponse<UserProducts> userResponse = ecomUserService.validateUserProduct(userProduct).getBody();
-        assert userResponse != null;
+        if(userResponse == null){
+            response.setData(null);
+            response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+            response.setMessage("Something went wrong !");
+            return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
         if(userResponse.getStatus() != 200){
             response.setData(new OrderDetails(-1,null,null,null,null));
             response.setStatus(HttpStatus.BAD_REQUEST.value());
@@ -253,14 +248,13 @@ public class OrderDetailsService {
             return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
         }
 
-        for(OrderDetails order : orderRepo.findAllByUserNameAndProductName(userProduct.getUserName(), userProduct.getProductName())){
-            if(order.getPaymentStatus().equals("Unpaid")){
+        for(OrderDetails order : orderRepo.findAllByUserNameAndProductName(userProduct.getUserName(), userProduct.getProductName()))
+            if (order.getPaymentStatus().equals("Unpaid")) {
                 order.setPaymentStatus("Paid");
                 orderRepo.save(order);
                 response.setData(order);
                 break;
             }
-        }
 
         response.setMessage("Successfully updated Product payment status");
         response.setStatus(HttpStatus.OK.value());

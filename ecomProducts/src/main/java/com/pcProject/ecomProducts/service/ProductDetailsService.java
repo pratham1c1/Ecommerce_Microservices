@@ -159,15 +159,11 @@ public class ProductDetailsService {
             return new ResponseEntity<>(response,HttpStatus.OK);
         }
 
-        assert existingProduct != null;
         existingProduct.setProductQuantity(existingProduct.getProductQuantity()-1);
         productRepo.save(existingProduct);
         response.setStatus(HttpStatus.OK.value());
-        response.setMessage("Returning the Product ");
+        response.setMessage("Returning the Product");
         return new ResponseEntity<>(response,HttpStatus.OK);
     }
-
-    //    -----------------------------------------
-
 
 }

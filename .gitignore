@@ -1,9 +1,12 @@
 #--- Coverage Artifacts ---
 
 #Matches folders like ns-1, ns-2, ns-a2fd1, etc.
-
+css/
+img/
+js/
 ns*/
 **/ns*/
+index*
 coverage/
 **/coverage/
 *.clover

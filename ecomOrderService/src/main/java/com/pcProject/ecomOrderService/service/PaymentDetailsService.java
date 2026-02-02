@@ -26,7 +26,9 @@ public class PaymentDetailsService {
     public ResponseEntity<UserProductsResponse<String>> getAllPayment(String userName){
         UserProductsResponse<List<String>> response = ecomUserService.getAllUserProducts(userName).getBody();
 
-        assert response != null;
+        if(response == null){
+            return new ResponseEntity<>(new UserProductsResponse<>(null,500,"Something went wrong !"),HttpStatus.BAD_REQUEST);
+        }
         if(response.getStatus() != 200){
             return new ResponseEntity<>(new UserProductsResponse<String>(null,response.getStatus(),response.getMessage()),HttpStatus.BAD_REQUEST);
         }
@@ -36,8 +38,7 @@ public class PaymentDetailsService {
         // To count all Product values
         for(String productName : response.getData()){
             ResponseEntity<UserProductsResponse<String>> productValueResponse = ecomProductService.getProductValue(new ProductWrapper(productName));
-            assert productValueResponse != null;
-            if(productValueResponse.getBody() != null){
+            if(productValueResponse != null && productValueResponse.getBody() != null){
                 totalPayment += Integer.parseInt(productValueResponse.getBody().getData());
             }
         }
@@ -48,7 +49,9 @@ public class PaymentDetailsService {
     public ResponseEntity<UserProductsResponse<UserProducts>> OneProductPayment(UserProducts userProduct){
         // Get All Products from User Order list
         UserProductsResponse<List<String>> response = ecomUserService.getAllUserProducts(userProduct.getUserName()).getBody();
-        assert response != null;
+        if(response == null){
+            return new ResponseEntity<>(new UserProductsResponse<>(null,500,"Something went wrong !"),HttpStatus.BAD_REQUEST);
+        }
         if(response.getStatus() != 200){
             return new ResponseEntity<>(new UserProductsResponse<UserProducts>(null,response.getStatus(),response.getMessage()),HttpStatus.BAD_REQUEST);
         }
@@ -83,7 +86,9 @@ public class PaymentDetailsService {
     public ResponseEntity<UserProductsResponse<String>> settleAllPayment(String userName){
         UserProductsResponse<List<String>> response = ecomUserService.getAllUserProducts(userName).getBody();
 
-        assert response != null;
+        if(response == null){
+            return new ResponseEntity<>(new UserProductsResponse<>(null,500,"Something went wrong !"),HttpStatus.BAD_REQUEST);
+        }
         if(response.getStatus() != 200){
             return new ResponseEntity<>(new UserProductsResponse<String>(null,response.getStatus(),response.getMessage()),HttpStatus.BAD_REQUEST);
         }
@@ -92,10 +97,14 @@ public class PaymentDetailsService {
         for(String productName : response.getData()){
             ResponseEntity<UserProductsResponse<String>> productValueResponse = ecomProductService.getProductValue(new ProductWrapper(productName));
             ecomUserService.removeUserProduct(new UserProducts(userName,productName));
-            assert productValueResponse != null;
-            if(productValueResponse.getBody() != null){
-                totalPayment += Integer.parseInt(productValueResponse.getBody().getData());
+
+            if(productValueResponse == null || productValueResponse.getBody() == null){
+                response.setData(null);
+                response.setStatus(500);
+                response.setMessage("Something went wrong !");
+                return new ResponseEntity<>(new UserProductsResponse<String>(null,response.getStatus(),response.getMessage()),HttpStatus.BAD_REQUEST);
             }
+            totalPayment += Integer.parseInt(productValueResponse.getBody().getData());
         }
 
         response.setMessage("Payment settled");
