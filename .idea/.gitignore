@@ -1,3 +1,47 @@
-# Default ignored files
-/shelf/
-/workspace.xml
+#--- Coverage Artifacts ---
+
+#Matches folders like ns-1, ns-2, ns-a2fd1, etc.
+
+ns*/
+**/ns*/
+coverage/
+**/coverage/
+*.clover
+htmlcov/
+.nyc_output/
+#--- Logs ---
+
+#Ignores all .log files and log directories anywhere in the project
+
+*.log
+logs/
+**/logs/
+
+#--- IDE Files (IntelliJ / VS Code) ---
+
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+gen/
+shelf/
+workspace.xml
+.vscode/
+.settings/
+.classpath
+.project
+.factorypath
+
+#--- Build Folders ---
+
+target/
+**/target/
+build/
+**/build/
+bin/
+
+#--- OS Specific ---
+
+.DS_Store
+Thumbs.db
