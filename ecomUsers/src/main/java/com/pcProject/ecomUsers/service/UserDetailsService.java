@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -204,6 +205,7 @@ public class UserDetailsService {
     }
 
     public Object addUserProfile(UserDetails user){
+        user.setUserPassword(new BCryptPasswordEncoder().encode(user.getUserPassword()));
         userRepo.save(user);
         return new ResponseEntity<>(user,HttpStatus.CREATED);
     }

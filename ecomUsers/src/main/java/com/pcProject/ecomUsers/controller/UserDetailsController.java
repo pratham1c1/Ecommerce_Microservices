@@ -61,7 +61,7 @@ public class UserDetailsController {
         return userService.getAllUsers();
     }
 
-    @PostMapping("addUserProfile")
+    @PostMapping("login")
     public Object addUserProfile(@RequestBody UserDetails user){
         return userService.addUserProfile(user);
     }

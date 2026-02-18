@@ -20,6 +20,7 @@ public class UserDetails {
     @Column(unique = true)
     private String userName;
     private String userPassword;
+    private List<String> userRoles;
     private String userEmail;
     private long userMobileNumber;
     @ElementCollection
