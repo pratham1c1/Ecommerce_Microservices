@@ -21,5 +21,9 @@
         <module>ecomServiceRegistry</module>
         <module>ecomUsers</module>
     </modules>
+    <properties>
+        <sonar.organization>pratham1c1</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    </properties>
 
 </project>
