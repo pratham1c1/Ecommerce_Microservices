@@ -142,7 +142,7 @@ public class UserDetailsControllerTest {
         when(userService.addUserProfile(any(UserDetails.class)))
                 .thenReturn(new ResponseEntity<>(userDetails, HttpStatus.CREATED));
 
-        mockMvc.perform(post("/users/addUserProfile")
+        mockMvc.perform(post("/users/login")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(userDetails)))
                 .andExpect(status().isCreated());

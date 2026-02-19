@@ -56,6 +56,7 @@ public class UserDetailsServiceTest {
     void setUp() {
         existingUser = new UserDetails();
         existingUser.setUserName(TEST_USER);
+        existingUser.setUserPassword("test_password");
         existingUser.setUserProductNames(new ArrayList<>(Arrays.asList(TEST_PRODUCT)));
     }
 
