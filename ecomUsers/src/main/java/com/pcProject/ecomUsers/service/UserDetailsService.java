@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Slf4j
@@ -204,10 +205,33 @@ public class UserDetailsService {
         return new ResponseEntity<>(user,HttpStatus.OK);
     }
 
-    public Object addUserProfile(UserDetails user){
-        user.setUserPassword(new BCryptPasswordEncoder().encode(user.getUserPassword()));
-        userRepo.save(user);
-        return new ResponseEntity<>(user,HttpStatus.CREATED);
+    public Object userSignIn(String userName, String userPassword){
+        UserDetails user = userRepo.findByUserName(userName);
+        if(user == null)
+            return new ResponseEntity<>("No user Found", HttpStatus.BAD_REQUEST);
+        if(!(new BCryptPasswordEncoder().matches(userPassword, user.getUserPassword())))
+            return new ResponseEntity<>("Username or password incorrect", HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(user,HttpStatus.OK);
+    }
+    public Object addUserProfile(String userName, String userPassword, String userEmail, Long userMobileNumber, String userRole) {
+        UserDetails user = userRepo.findByUserName(userName);
+        if(user != null){
+            if(user.getUserRoles().contains(userRole))
+                return new ResponseEntity<>(user,HttpStatus.CONFLICT);
+            List<String> roles = user.getUserRoles();
+            roles.add(userRole);
+            user.setUserRoles(roles);
+            userRepo.save(user);
+            return new ResponseEntity<>(user,HttpStatus.ACCEPTED);
+        }
+        UserDetails newUser = new UserDetails();
+        newUser.setUserName(userName);
+        newUser.setUserPassword(new BCryptPasswordEncoder().encode(userPassword));
+        newUser.setUserEmail(userEmail);
+        newUser.setUserRoles(new ArrayList<>(Arrays.asList(userRole)));
+        newUser.setUserMobileNumber(userMobileNumber);
+        userRepo.save(newUser);
+        return new ResponseEntity<>(newUser,HttpStatus.CREATED);
     }
 
     public Object updateUserProfile(UserDetails user){
@@ -216,7 +240,7 @@ public class UserDetailsService {
             return new ResponseEntity<>("Could not find the User with given name",HttpStatus.BAD_REQUEST);
 
         existingUser.setUserEmail(user.getUserEmail());
-        existingUser.setUserPassword(user.getUserPassword());
+        existingUser.setUserPassword(new BCryptPasswordEncoder().encode(user.getUserPassword()));
         existingUser.setUserMobileNumber(user.getUserMobileNumber());
         userRepo.save(existingUser);
         return new ResponseEntity<>(existingUser,HttpStatus.OK);

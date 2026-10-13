@@ -25,7 +25,7 @@ public class OrderDetailsController {
         return orderService.getAllOrderDetails(userName);
     }
 
-    @PostMapping("getOneOrderDetails")
+    @PostMapping("getOneUnPaidOrderDetails")
     public ResponseEntity<UserProductsResponse<OrderDetails>> getOneOrderDetails(@RequestBody UserProducts userProduct){
         return orderService.getOneOrderDetails(userProduct);
     }

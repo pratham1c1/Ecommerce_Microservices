@@ -8,10 +8,20 @@ import com.pcProject.ecomProducts.model.ProductDetails;
 import com.pcProject.ecomProducts.model.ProductWrapper;
 import com.pcProject.ecomProducts.model.UserProductsResponse;
 import com.pcProject.ecomProducts.repository.ProductDetailsRepo;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.advisor.vectorstore.QuestionAnswerAdvisor;
+import org.springframework.ai.converter.ListOutputConverter;
+import org.springframework.ai.document.Document;
+import org.springframework.ai.transformer.splitter.TokenTextSplitter;
+import org.springframework.ai.vectorstore.pgvector.PgVectorStore;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.core.convert.support.DefaultConversionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.handler.annotation.Header;
@@ -21,16 +31,25 @@ import org.springframework.transaction.annotation.Transactional;
 import java.io.DataInput;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class ProductDetailsService {
     @Autowired
     private ProductDetailsRepo productRepo;
     @Autowired
     private ObjectMapper objectMapper;
+    @Autowired
+    @Qualifier("OllamaBean")
+    private ChatClient chatClient;
+    @Autowired
+    private QuestionAnswerAdvisor questionAnswerAdvisor;
+    private final PgVectorStore vectorStore;
+    private final JdbcTemplate jdbcTemplate;
 
     // To get the Product Details
     public Object getProductDetails(ProductWrapper product){
@@ -39,6 +58,53 @@ public class ProductDetailsService {
             return new ResponseEntity<>("Could not find the Product with given name",HttpStatus.BAD_REQUEST);
 
         return new ResponseEntity<>(existingProduct, HttpStatus.OK);
+    }
+
+    public void loadFromDatabase() {
+        // 1. Query all product rows
+        List<Map<String, Object>> rows = jdbcTemplate.queryForList(
+                "SELECT product_id,product_name,product_quantity,product_value FROM product_details;"
+        );
+
+        // 2. Convert each row → Document (content = description, metadata = other fields)
+        List<Document> documents = rows.stream()
+                .map(row -> {
+                    Map<String, Object> metadata = new HashMap<>();
+                    metadata.put("product_id", row.get("product_id"));
+                    metadata.put("product_name", row.get("product_name"));
+                    metadata.put("product_quantity", row.get("product_quantity"));
+                    metadata.put("price", row.get("product_value"));
+
+                    // Content is what gets embedded — use the description (or any long text field)
+                    String content = String.valueOf(row.get("product_name"));
+
+                    return new Document(content, metadata);
+                })
+                .toList();
+
+        // 3. Split long descriptions into chunks
+        TokenTextSplitter splitter = TokenTextSplitter.builder()
+                .withChunkSize(400)
+                .withMinChunkSizeChars(350)
+                .withMinChunkLengthToEmbed(5)
+                .withMaxNumChunks(10000)
+                .withKeepSeparator(true)
+                .build();
+
+        List<Document> chunks = splitter.apply(documents);
+
+        // 4. Add to vector store
+        vectorStore.add(documents);
+    }
+
+    // To search user query using RAG
+    public List<String> searchProducts(String query){
+
+        return chatClient.prompt()
+                .user(query)
+                .advisors(questionAnswerAdvisor)
+                .call()
+                .entity(new ListOutputConverter(new DefaultConversionService()));
     }
 
     @Transactional

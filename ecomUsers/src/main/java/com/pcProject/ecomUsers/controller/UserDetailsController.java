@@ -62,8 +62,12 @@ public class UserDetailsController {
     }
 
     @PostMapping("login")
-    public Object addUserProfile(@RequestBody UserDetails user){
-        return userService.addUserProfile(user);
+    public Object addUserProfile(@RequestParam String userName, @RequestParam String userPassword){
+        return userService.userSignIn(userName,userPassword);
+    }
+    @PostMapping("register")
+    public Object addSellerProfile(@RequestParam String userName,@RequestParam String userPassword,@RequestParam String userEmail,@RequestParam Long userMobileNumber,@RequestParam String userRole){
+        return userService.addUserProfile(userName,userPassword,userEmail,userMobileNumber,userRole);
     }
 
     @PutMapping("updateUserProfile")

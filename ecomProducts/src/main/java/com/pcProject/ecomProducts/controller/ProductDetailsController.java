@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -44,6 +45,11 @@ public class ProductDetailsController {
     @GetMapping("getAllProducts")
     public Object getAllProducts(){
         return productService.getAllProducts();
+    }
+
+    @GetMapping("searchProducts/{query}")
+    public List<String> searchProducts(@PathVariable String query){
+        return productService.searchProducts(query);
     }
 
     @PostMapping("addProductDetails")

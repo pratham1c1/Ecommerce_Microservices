@@ -196,7 +196,7 @@ public class OrderDetailsService {
         return new ResponseEntity<>(response,HttpStatus.OK);
     }
 
-    // Get First Unpaid Order of User Product
+    // Get First UnPaid Order of User Product
     public ResponseEntity<UserProductsResponse<OrderDetails>> getOneOrderDetails(UserProducts userProduct){
         UserProductsResponse<OrderDetails> response = new UserProductsResponse<>();
 
@@ -214,9 +214,9 @@ public class OrderDetailsService {
             return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
         }
 
-        // Get First Unpaid Order
+        // Get First UnPaid Order
         for(OrderDetails order : orderRepo.findAllByUserNameAndProductName(userProduct.getUserName(), userProduct.getProductName())){
-            if(order.getPaymentStatus().equals("Unpaid")) {
+            if(order.getPaymentStatus().equals("UnPaid")) {
                 response.setData(order);
                 response.setMessage("Successfully retrieved User product details");
                 response.setStatus(HttpStatus.OK.value());
@@ -249,7 +249,7 @@ public class OrderDetailsService {
         }
 
         for(OrderDetails order : orderRepo.findAllByUserNameAndProductName(userProduct.getUserName(), userProduct.getProductName()))
-            if (order.getPaymentStatus().equals("Unpaid")) {
+            if (order.getPaymentStatus().equals("UnPaid")) {
                 order.setPaymentStatus("Paid");
                 orderRepo.save(order);
                 response.setData(order);
